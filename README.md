@@ -2,7 +2,7 @@
 
 代码基于 [CRZ.im](https://github.com/Caringor/CRZ.im) 二次开发，感谢原作者的辛勤劳动。
 
-##预览
+## 预览
 
 [🪄传送门🚀](https://zhian.pro)
 
