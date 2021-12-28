@@ -79,6 +79,15 @@
         console.log(position);
     }
 </script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d7e224cc815e5c92daf64f90f7e641cd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
  <!-- IP定位 -->
  <script type="text/javascript">
 //             $(document).ready(function() {
