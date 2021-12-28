@@ -12,20 +12,7 @@
       		header('Location: ' . $url);
       		exit;
     	}
-  	}
-  	
- // 统计用户
-    @session_start();  
-    $counter = intval(file_get_contents("counter.dat"));  
-    if(!$_SESSION['#'])  
-    {  
-     $_SESSION['#'] = true;  
-     $counter++;  
-     $fp = fopen("counter.dat","w");  
-     fwrite($fp, $counter);  
-     fclose($fp);  
-    }  
-    // echo "$counter";
+  }
 ?>
 
 <?php include 'header.php' ?>
