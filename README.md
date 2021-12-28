@@ -1,4 +1,4 @@
-# ShortLink
+# ShortUrl
 
 代码基于 [CRZ.im](https://github.com/Caringor/CRZ.im) 二次开发，感谢原作者的辛勤劳动。
 
