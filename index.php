@@ -14,8 +14,20 @@
     	}
   	}
   	
-
+ // 统计用户
+    @session_start();  
+    $counter = intval(file_get_contents("counter.dat"));  
+    if(!$_SESSION['#'])  
+    {  
+     $_SESSION['#'] = true;  
+     $counter++;  
+     $fp = fopen("counter.dat","w");  
+     fwrite($fp, $counter);  
+     fclose($fp);  
+    }  
+    // echo "$counter";
 ?>
+
 <?php include 'header.php' ?>
 <body>
     <!--[if lt IE 8]>
@@ -62,10 +74,11 @@
                         <!--</div>-->
                        
                         <div class="submit-btn-area">
-                            <!--<input id="submit" type="button" value="生成" onclick="APP.fn.setUrl(this)" />-->
+                            <input id="submit" type="button" value="生成" onclick="APP.fn.setUrl(this)" />
                             <div class="login-other row mt-4">
                                 <div class="col-6">
-                                    <a class="fb-login" id="submit" type="button" onclick="APP.fn.setUrl(this)">生成</a>
+                                    <!--<a class="fb-login" id="submit" type="button" onclick="APP.fn.setUrl(this)">生成</a>-->
+                                    <a class="fb-login" href="javascript:void(0);">总点击：<?php echo "$counter"; ?>次</a>
                                     
                                 </div>
                                 <div class="col-6">
