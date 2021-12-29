@@ -4,6 +4,7 @@
         global $config;
         return $config['title'];
     }
+
     // 获取网站简介
     function get_description() {
         global $config;
