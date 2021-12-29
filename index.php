@@ -2,6 +2,17 @@
   	// 引入类
 	require_once('inc/require.php');
 	
+	@session_start();  
+    $counter = intval(file_get_contents("counter.dat"));  
+    if(!$_SESSION['#'])  
+    {  
+     $_SESSION['#'] = true;  
+     $counter++;  
+     $fp = fopen("counter.dat","w");  
+     fwrite($fp, $counter);  
+     fclose($fp);  
+    }  
+	
 	// 重定向
   	if(isset($_GET['id'])) {
     	$url_c = new url();
@@ -12,17 +23,7 @@
       		header('Location: ' . $url);
       		exit;
     	}
-  }
-@session_start();  
-    $counter = intval(file_get_contents("counter.dat"));  
-    if(!$_SESSION['#'])  
-    {  
-     $_SESSION['#'] = true;  
-     $counter++;  
-     $fp = fopen("counter.dat","w");  
-     fwrite($fp, $counter);  
-     fclose($fp);  
-    }  
+  	}
 ?>
 
 <?php include 'header.php' ?>
