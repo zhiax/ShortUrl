@@ -1,5 +1,5 @@
 <?php
-  	// 引入类
+  	// 引入类 
 	require_once('inc/require.php');
 	
 	// 重定向
